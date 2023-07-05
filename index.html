@@ -1,0 +1,284 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>CCI Drama</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <div class="login-root">
+      <div
+        class="box-root flex-flex flex-direction--column"
+        style="min-height: 100vh; flex-grow: 1"
+      >
+        <div class="loginbackground box-background--white padding-top--64">
+          <div class="loginbackground-gridContainer">
+            <div
+              class="box-root flex-flex"
+              style="grid-area: top / start / 8 / end"
+            >
+              <div
+                class="box-root"
+                style="
+                  background-image: linear-gradient(
+                    white 0%,
+                    rgb(247, 250, 252) 33%
+                  );
+                  flex-grow: 1;
+                "
+              ></div>
+            </div>
+            <div class="box-root flex-flex" style="grid-area: 4 / 2 / auto / 5">
+              <div
+                class="box-root box-divider--light-all-2 animationLeftRight tans3s"
+                style="flex-grow: 1"
+              ></div>
+            </div>
+            <div
+              class="box-root flex-flex"
+              style="grid-area: 6 / start / auto / 2"
+            >
+              <div
+                class="box-root box-background--blue800"
+                style="flex-grow: 1"
+              ></div>
+            </div>
+            <div
+              class="box-root flex-flex"
+              style="grid-area: 7 / start / auto / 4"
+            >
+              <div
+                class="box-root box-background--blue animationLeftRight"
+                style="flex-grow: 1"
+              ></div>
+            </div>
+            <div class="box-root flex-flex" style="grid-area: 8 / 4 / auto / 6">
+              <div
+                class="box-root box-background--gray100 animationLeftRight tans3s"
+                style="flex-grow: 1"
+              ></div>
+            </div>
+            <div
+              class="box-root flex-flex"
+              style="grid-area: 2 / 15 / auto / end"
+            >
+              <div
+                class="box-root box-background--cyan200 animationRightLeft tans4s"
+                style="flex-grow: 1"
+              ></div>
+            </div>
+            <div
+              class="box-root flex-flex"
+              style="grid-area: 3 / 14 / auto / end"
+            >
+              <div
+                class="box-root box-background--blue animationRightLeft"
+                style="flex-grow: 1"
+              ></div>
+            </div>
+            <div
+              class="box-root flex-flex"
+              style="grid-area: 4 / 17 / auto / 20"
+            >
+              <div
+                class="box-root box-background--gray100 animationRightLeft tans4s"
+                style="flex-grow: 1"
+              ></div>
+            </div>
+            <div
+              class="box-root flex-flex"
+              style="grid-area: 5 / 14 / auto / 17"
+            >
+              <div
+                class="box-root box-divider--light-all-2 animationRightLeft tans3s"
+                style="flex-grow: 1"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="box-root padding-top--24 flex-flex flex-direction--column"
+          style="flex-grow: 1; z-index: 9"
+        >
+          <div
+            class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center"
+          >
+            <h1>CCI Drama Payment Confirmation Page</h1>
+          </div>
+          <div class="formbg-outer">
+            <div class="formbg">
+              <div class="formbg-inner padding-horizontal--48">
+                <span class="padding-bottom--15">Fill the form below</span>
+                <form
+                  class="gform pure-form pure-form-stacked"
+                  method="POST"
+                  data-email="onyenaucheyaemma@gmail.com"
+                  action="https://script.google.com/macros/s/AKfycby1F4ntPOo0i1i3WTMtZxw1NSwn-UysRhxFjCF3Cs82TZP3Tsc6j1f7i_DqO-3DdrMQeQ/exec"
+                >
+                  <div class="field padding-bottom--24">
+                    <label for="Name">Name</label>
+                    <input type="Name" name="Name" />
+                  </div>
+                  <div class="field padding-bottom--24">
+                    <div class="grid--50-50">
+                      <label for="Amount">Amount</label>
+                    </div>
+                    <input type="Amount" name="Amount" />
+                  </div>
+                  <div class="field padding-bottom--24">
+                    <div class="grid--50-50">
+                      <label for="Payment Status">Payment Status</label>
+                    </div>
+                    <select
+                      class="pr-5 pl-5"
+                      name="Payment Status"
+                      size=""
+                      fdprocessedid="d1zuvj"
+                    >
+                      <option value="Confirmed">Confirmed</option>
+                      <option value="Pending">Pending</option>
+                    </select>
+                  </div>
+
+                  <a href="/success.html"
+                      > <div class="field padding-bottom--24">
+                   <input  type="submit" value="Submit"
+                    /></a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <br />
+          <br />
+        </div>
+      </div>
+    </div>
+
+    <script data-cfasync="false" type="text/javascript">
+      (function () {
+        function validEmail(email) {
+          var re =
+            /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+          return re.test(email);
+        }
+
+        function validateHuman(honeypot) {
+          if (honeypot) {
+            console.log("Robot Detected!");
+            return true;
+          } else {
+            console.log("Welcome Human!");
+          }
+        }
+        function getFormData(form) {
+          var elements = form.elements;
+
+          var fields = Object.keys(elements)
+            .filter(function (k) {
+              return elements[k].name !== "honeypot";
+            })
+            .map(function (k) {
+              if (elements[k].name !== undefined) {
+                return elements[k].name;
+              } else if (elements[k].length > 0) {
+                return elements[k].item(0).name;
+              }
+            })
+            .filter(function (item, pos, self) {
+              return self.indexOf(item) == pos && item;
+            });
+
+          var formData = {};
+          fields.forEach(function (name) {
+            var element = elements[name];
+            formData[name] = element.value;
+            if (element.length) {
+              var data = [];
+              for (var i = 0; i < element.length; i++) {
+                var item = element.item(i);
+                if (item.checked || item.selected) {
+                  data.push(item.value);
+                }
+              }
+              formData[name] = data.join(", ");
+            }
+          });
+
+          // add form-specific values into the data
+          formData.formDataNameOrder = JSON.stringify(fields);
+          formData.formGoogleSheetName = form.dataset.sheet || "Sheet1"; // default sheet name
+          formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
+
+          console.log(formData);
+          return formData;
+        }
+
+        function handleFormSubmit(event) {
+          event.preventDefault();
+          var form = event.target;
+          var data = getFormData(form);
+          if (data.email && !validEmail(data.email)) {
+            var invalidEmail = form.querySelector(".email-invalid");
+            if (invalidEmail) {
+              invalidEmail.style.display = "block";
+              return false;
+            }
+          } else {
+            disableAllButtons(form);
+            var url = form.action;
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", url);
+            xhr.setRequestHeader(
+              "Content-Type",
+              "application/x-www-form-urlencoded"
+            );
+            xhr.onreadystatechange = function () {
+              console.log(xhr.status, xhr.statusText);
+              console.log(xhr.responseText);
+              var formElements = form.querySelector(".form-elements");
+              if (formElements) {
+                formElements.style.display = "none"; // hide form
+              }
+              var thankYouMessage = form.querySelector(".thankyou_message");
+              if (thankYouMessage) {
+                thankYouMessage.style.display = "block";
+              }
+              return;
+            };
+            var encoded = Object.keys(data)
+              .map(function (k) {
+                return (
+                  encodeURIComponent(k) + "=" + encodeURIComponent(data[k])
+                );
+              })
+              .join("&");
+            xhr.send(encoded);
+          }
+        }
+        function loaded() {
+          console.log("Contact form submission handler loaded successfully.");
+          var forms = document.querySelectorAll("form.gform");
+          for (var i = 0; i < forms.length; i++) {
+            forms[i].addEventListener("submit", handleFormSubmit, false);
+          }
+        }
+        document.addEventListener("DOMContentLoaded", loaded, false);
+
+        function disableAllButtons(form) {
+          var buttons = form.querySelectorAll("button");
+          for (var i = 0; i < buttons.length; i++) {
+            buttons[i].disabled = true;
+          }
+        }
+      })();
+
+      function displayThanks() {
+        alert(
+          "Thanks For Your Contribution To CCI Drama Unit\n God Loves A Cheerful Giver!"
+          
+        );
+      }
+    </script>
+  </body>
+</html>
